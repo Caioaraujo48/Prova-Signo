@@ -1,4 +1,4 @@
-package com.has.prova
+package com.example.signoprova
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -21,12 +21,12 @@ class MainActivity : AppCompatActivity() {
     fun DateTrue(day : Int, month : Int){
         if(day < 1 || day > 31) {
             if (month < 1 || month > 12) {
-                RESULT_OK
+                val toast = Toast.makeText(this, "Data Inexistente ", Toast.LENGTH_SHORT).show()
+                RESULT_CANCELED
             }
         }
         else{
-            val toast = Toast.makeText(this, "Data Inexistente ", Toast.LENGTH_SHORT).show()
-            RESULT_CANCELED
+            RESULT_OK
         }
     }
 
